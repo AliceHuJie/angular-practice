@@ -1,0 +1,42 @@
+<p>key up时通过event目标对象获取值1</p>
+<input (keyup)="onKey1($event)">
+<p>{{values1}}</p>
+
+<nz-divider></nz-divider>
+<p>key up时通过event目标对象获取值2</p>
+<input (keyup)="onKey2($event)">
+<p>{{values2}}</p>
+
+
+<nz-divider></nz-divider>
+<p>key up时通过event.key获取按键</p>
+<input (keyup)="onKey3($event)">
+<p>{{values3}}</p>
+
+
+<nz-divider></nz-divider>
+<p>console.log查看通过event对象内容</p>
+<input (keyup)="onKey4($event)">
+
+
+<nz-divider></nz-divider>
+<p>从一个模板引用变量中获得用户输入(input 必须有onkey事件: (keyup)="0")</p>
+<input #input5 (keyup)="0">
+<p>{{input5.value}}</p>
+
+<nz-divider></nz-divider>
+<p>从一个模板引用变量中获得用户输入((keyup)="onKey6(input6.value)")</p>
+<input #input6 (keyup)="onKey6(input6.value)">
+<p>{{values6}}</p>
+
+
+<nz-divider></nz-divider>
+<p>按键事件过滤（通过 key.enter）</p>
+<input #input7 (keyup.enter)="0">
+<p>{{input7.value}}</p>
+
+
+<nz-divider></nz-divider>
+<p>enter 和blur失焦时更新（(keyup.enter)，(blur))）</p>
+<input #input8 (keyup.enter)="update(input8.value)" (blur)="update(input8.value)">
+<p>{{values8}}</p>

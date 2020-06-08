@@ -1,0 +1,10 @@
+<input #newDog
+       placeholder="请输入狗狗名称"
+       (keyup.enter)="addDog(newDog.value);newDog.value=''" (blur)="addDog(newDog.value); newDog.value=''">
+<ul nz-list nzBordered nzSize="large" [nzDataSource]="dogs">
+  <!--  <nz-list-header>狗狗列表</nz-list-header>-->
+  <nz-list-item *ngFor="let dog of dogs">
+    {{dog}}
+  </nz-list-item>
+  <!--  <nz-list-footer>底部</nz-list-footer>-->
+</ul>
