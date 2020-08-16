@@ -1,0 +1,11 @@
+<app-child [school]="school" [persons]="persons"></app-child>
+<nz-divider></nz-divider>
+<input [(ngModel)]="school">
+<nz-divider></nz-divider>
+<input #name placeholder="输入姓名">
+<button (click)="add(name.value, 11)">添加</button>
+<button (click)="clear()">清空</button>
+
+<div *ngFor="let log of logs">
+  {{log}}
+</div>
